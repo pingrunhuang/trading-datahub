@@ -1,5 +1,6 @@
 # crypto-trading-bot
-
+This is a module that used to fetch historical market data from various 
+exchanges using http request.
 
 
 ## setup
@@ -25,6 +26,8 @@ I define a base connection class which has all the common functions that one con
 For example, 
 each connection will have a symbol manager which allows it to query all the symbols' info into memory
 each connection should have a union way to write data into databases
+The project use async http request and async data writing into database for faster runtime.
+
 
 ### different functionalities
 - bar data grabbing
@@ -33,23 +36,5 @@ each connection should have a union way to write data into databases
 - minnor operations
 each functionality will have one corresponding config file to that
 
-
-
 ## how does it work?
-define the configs file as shown in the example configurations
-
-
-
-## matrix of measuring a strategy
-- sharpe ratio
-- win rate
-- number of trades
-
-## configurations of strategies
-- win lost ratio
-
-
-
-2 issues need to be solved 
-1. make sure async running code work
-2. make sure websocket client code work
+define the config file in the `configs` directory as shown in the example configurations
