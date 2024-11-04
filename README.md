@@ -19,14 +19,14 @@ once setup virtual environment, we can run follows:
 `python main.py --funcname upsert_symbols` this is update all the symbols for all exchanges specified in the config file
 
 `python main.py --funcname grab_klines`
-
+currently only suppport BNC grabbing
 ## design 
 the `connections` module is where I store all the connections to different exchanges
-I define a base connection class which has all the common functions that one connection is supposed to have.
-For example, 
+I define a base connection class which has all the common functions that one connection is supposed to have. For example:
 each connection will have a symbol manager which allows it to query all the symbols' info into memory
 each connection should have a union way to write data into databases
 The project use async http request and async data writing into database for faster runtime.
+![class diagram]("https://github.com/pingrunhuang/trading-datahub/blob/main/class_design.png")
 
 
 ### different functionalities
