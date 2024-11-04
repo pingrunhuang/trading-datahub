@@ -26,7 +26,7 @@ I define a base connection class which has all the common functions that one con
 each connection will have a symbol manager which allows it to query all the symbols' info into memory
 each connection should have a union way to write data into databases
 The project use async http request and async data writing into database for faster runtime.
-![class diagram]("https://github.com/pingrunhuang/trading-datahub/blob/main/class_design.png")
+![class diagram](https://github.com/pingrunhuang/trading-datahub/blob/main/class_design.png)
 
 
 ### different functionalities
